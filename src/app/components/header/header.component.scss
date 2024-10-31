@@ -1,0 +1,181 @@
+@import "../../cores-principais.scss";
+@import "../../functions.scss";
+
+header {
+    padding-top: 0.5vw;
+    transition: transform 0.5s ease;
+    background-color: white;
+}
+
+.fixed {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    top: -52px;
+    transform: translateY(50px);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.notfixed {
+    position: static;
+    transform: translateY(0px); 
+}
+
+nav {
+    @include display-row-mixin;
+    align-items: center !important;
+    justify-content: space-evenly !important;
+    width: 100% !important;
+    background-color: white !important;
+    border-bottom: 1px solid black;
+    
+    
+
+    .logo {
+       
+        img {
+            border-radius: 100px;
+            border: 5px solid $xMarromEscuro;
+        }
+
+        img:hover {
+            transition: 2s;
+            transform: rotate(360deg);
+        }
+
+        img:active {
+            transition: 0.4s;
+            transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+        }
+    }
+
+    .container-fluid {
+
+        font-size: 1.4vw;
+        margin: 0;
+        width: 40%;
+        font-family: "Lexend", sans-serif;
+        font-weight: 500;
+        padding: 0;
+        
+
+        #navbarSupportedContent {
+           
+            .navbar-nav {
+
+                ul {
+                    margin: 0 !important;
+                }
+
+                li {
+                    margin-right: 2vw;
+
+                    a {
+                        margin-left: 0;
+                    }
+                  
+                    a:hover {
+                        transition: 0.3s;
+                        color: $xMarromEscuro;
+                        //border-bottom: 2px solid $xMarromEscuro;
+                        box-shadow: $xMarromEscuro 0px 10px, $xMarromClaro 0px 20px, $xBege 0px 30px;
+
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .busca-idioma {
+        @include display-row-mixin;
+        width: 40%;
+        font-family: "Lexend", sans-serif;
+        justify-content: space-between;
+        gap: 1vw;
+
+
+        .busca {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 1.4vw;
+            width: 100%;
+
+
+            input {
+                font-size: 1vw;
+                height: 3vw;
+                border: 1px solid black;
+            }
+
+            input:focus {
+                transition: 0.2s;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                
+                span {
+                    margin-left: 0.4vw;
+                    font-size: 1.6vw;
+                    user-select: none;
+                }
+
+                span:hover {
+                    transition: 0.4s;
+                    color: $xMarromEscuro;
+                }
+            }
+        }
+
+        .idioma {
+            @include display-row-mixin;
+            align-items: center;
+            width: 32%;
+            justify-content: space-evenly;
+
+            span {
+                font-size: 2.5vw;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            span:hover {
+                transition: 0.4s;
+                color: $xMarromClaro;
+            }
+
+            div {
+                @include display-row-mixin;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0.4vw;
+                font-size: 1.2vw;
+
+                a {
+                    text-decoration: none;
+                    color: $xMarromClaro;
+                    font-weight: 500;
+                }
+
+                a:hover {
+                    transition: 0.4s;
+                    color: $xPreto;
+                }
+
+
+                p {
+                    user-select: none;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+

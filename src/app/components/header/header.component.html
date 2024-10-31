@@ -1,0 +1,128 @@
+<header (scroll)="onscroll()" [ngClass]="headerFixed?'fixed':'notfixed' ">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <div class="logo">
+      <a routerLink="">
+        <img
+        ngSrc="../../../assets/logoMuseu.jpg"
+        width="120"
+        height="120"
+        alt="logo do museu"
+      />
+
+      </a>
+
+    </div>
+
+    <div class="container-fluid">
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/feiras">Feiras</a>
+          </li>
+
+          <!-- DROPDOWN DAS EXPOSIÇÕES -->
+          <!-- <li class="nav-item dropdown">
+             Botão que abre o dropdown 
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Exposições
+            </a>
+
+            COnteúdo do dropdown 
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Arte moderna</a></li>
+              <li><a class="dropdown-item" href="#">Paleontologia</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Outros</a></li>
+            </ul>
+          </li> -->
+
+
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/exposicoes">Exposições</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/artistas">
+              Artistas
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/editorial">
+              Editorial</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="busca-idioma">
+
+      <div class="busca">
+
+      
+
+        <input
+        type="search"
+        class="form-control"
+        placeholder="Procure por obras, expositores, artistas etc."
+        aria-label="Search"
+        aria-describedby="search-addon"
+        
+      />
+
+      <a type="button">
+        <span class="material-symbols-outlined">
+          search
+        </span>
+      </a>
+
+
+
+
+      </div>
+
+      <div class="idioma">
+        <span class="material-symbols-outlined">
+          account_circle
+        </span>
+
+        <div>
+          <a href="" type="button"> Pt </a>
+          <p> | </p>
+          <a href="" type="button"> En </a>
+        </div>
+
+      </div>
+   
+
+    </div>
+  </nav>
+
+</header>
