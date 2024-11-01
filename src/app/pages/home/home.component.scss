@@ -1,2 +1,88 @@
 @import "../../cores-principais.scss";
 @import "../../functions.scss";
+
+
+.moreInfo {
+    margin-top: 100px;
+    font-family: "Lexend", sans-serif;
+    margin-bottom: 100px;
+
+    .title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1vw;
+        h1 {
+            font-size: 4vw;
+        }
+    }
+
+    .imageDiv {
+        background-image: url("../../../assets/exposicaoMuseu.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 40vw;
+        background-size: 100% auto;
+        display: flex;
+        justify-content: end;
+
+
+        .infoBox {
+            color: white;
+            background: $xMarromEscuro;
+            opacity: 0.97;
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3vw;
+            clip-path: ellipse(
+                100%
+                150%
+                at
+                100%
+                50%
+              );
+                // clip-path: ellipse(rx ry at cx cy);
+                // em que rx: raio horizontal; 
+                // ry: raio vertical; 
+                // cx: especifica a posição do centro em relação a X;
+                // cy: especifica a posicação do centro em relação a y
+
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    height: 90%;
+
+                    h1 {
+                        font-size: 3.5vw;
+                        font-weight: 700;
+                    }
+
+                    p {
+                        font-weight: 500;
+                        font-size: 1.2vw;
+                    }
+
+                    a {
+                        text-align: center;
+                        width: 40%;
+                        color: white;
+                        text-decoration: none;
+                        border: 3px solid $xBranco;
+                        padding: 10px;
+                        border-radius: 10px;
+                        font-size: 1.2vw;
+                    }
+
+                    a:hover {
+                        transition: 0.4s;
+                        background-color: white;
+                        color: black;
+                    }
+                }
+        }
+    }
+
+
+}
