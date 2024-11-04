@@ -1,0 +1,184 @@
+@import "../../cores-principais.scss";
+@import "../../functions.scss";
+
+// SCSS específico da tela de Login
+#mainLogin{
+    background-image: url('../../../assets/museuClassico.jpg') !important;
+}
+
+#login {
+
+    padding: 0;
+
+    margin: 0;  
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 70vh;
+
+    font-family: "Lexend", sans-serif !important;
+
+    margin-bottom: 1vw;
+
+    text-decoration: none;
+
+    perspective: 400px;
+    transform-style: preserve-3d;
+
+    .card {
+        border: 2px solid $xMarromExtraEscuro;
+
+        background-color: white;//rgba(19, 19, 19, 0.3);
+    
+        padding: 40px;
+    
+        border-radius: 2px;
+    
+        width:320px;
+        
+        //height: 100px;
+        background-image: linear-gradient(to bottom, $xMarromClaro 0%, $xMarromExtraEscuro 150%);
+        border-radius: 100px / 50px;
+        transform: rotateX(0deg);
+        animation: gira 1s infinite alternate;
+
+        .card-header {
+
+            padding-bottom: 10px;
+        
+            opacity: 0.8;
+        
+            color: white;
+        
+            text-align: center;
+
+            background-color: $xMarromEscuro !important;
+
+            border: 3px solid $xMarromExtraEscuro;
+        
+        }
+
+        /*.card-header::after {
+
+            content: "";
+        
+            width: 70px;
+        
+            height: 1px;
+        
+            //background-color: #fff;
+        
+            display: block;
+        
+            margin-top: -17px;
+        
+            margin-left: -5px;
+        
+        }*/
+
+        .card-content {
+            label {
+
+                color: black;
+            
+                font-size: 12px;
+            
+                opacity: 0.8;
+            
+            }
+
+            .card-content-area {
+
+                display: flex;
+            
+                flex-direction: column;
+            
+                padding:10px 0;
+            
+                input {
+            
+                    margin-top: 10px;
+                
+                    padding:0 5px;
+                
+                    background-color: transparent;
+                
+                    border:1px solid black;
+                
+                    //border-bottom: 1px solid #e1e1e1;
+                
+                    outline: none;
+                
+                    color: #fff;
+                
+                }
+            
+            } 
+            
+        }
+
+        .card-footer {
+
+            display: flex;
+        
+            flex-direction: column;
+
+            //background-color: $xMarromClaro;
+
+            border: none;
+        
+            .nav-item{
+                //display: flex;
+
+                //flex-direction: column;
+
+                //width: 40%;
+        
+                //height: 40px;
+        
+                background-color: $xMarromEscuro;
+        
+                border:1px solid black;
+        
+                color:#e1e1e1;
+        
+                margin: 5px 0;
+
+                text-decoration: none;
+            }
+
+            .nav-item:hover{
+                transition: 0.7s;
+                font-size: 20px;
+                color: black;
+                background-color: $xMarromClaro;
+                //border: 2px solid rgba(255, 255, 255, 0);
+            }
+
+            .recuperar_senha:hover{
+                transition: 0.7s;
+                font-size: 14px;
+            }
+        
+            a {
+        
+                text-align: center;
+            
+                font-size: 12px;
+            
+                opacity: 0.8;
+            
+                color: #fff; 
+            
+            }
+        
+        }
+    
+    }
+
+}
+
