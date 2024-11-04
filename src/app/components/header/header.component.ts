@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onscroll() {
-    if(window.scrollY > 60) {
+    if(window.scrollY > 40) {
       this.headerFixed = true
     } else {
       this.headerFixed = false;
