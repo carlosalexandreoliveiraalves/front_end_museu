@@ -1,0 +1,10 @@
+@mixin display-row-mixin() {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin second-title() {
+    font-size: 2.5vw;
+    color: black;
+    font-weight: 600;
+}

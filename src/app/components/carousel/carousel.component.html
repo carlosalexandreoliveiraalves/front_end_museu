@@ -1,0 +1,35 @@
+<article class="carousel">
+
+  <div
+    class="carouselDiv"
+    [ngStyle]="{ transform: 'translateX(' + slideOffset + '%)' }"
+  >
+    <div
+      *ngFor="let item of carouselItems; let i = index"
+      class="carouselImage"
+      [class.active]="i === currentIndex"
+    >
+      <img
+        ngSrc="{{ item.image }}"
+        width="1000"
+        height="700"
+        priority="true"
+        alt="{{ i + 1 }}º imagem do carrosel"
+      />
+
+      <div class="textDiv">
+        <h1> {{item.title}} </h1>
+        <p> {{item.text}} </p>
+        <a href="#"> Compre seu ingresso! </a>
+      </div>
+    </div>
+  </div>
+
+  <a type="button" class="prevBtn" (click)="prevImage()">
+    <span class="material-symbols-outlined"> arrow_back_ios </span>
+  </a>
+
+  <a type="class" class="nextBtn" (click)="nextImage()">
+    <span class="material-symbols-outlined"> arrow_forward_ios </span>
+  </a>
+</article>
