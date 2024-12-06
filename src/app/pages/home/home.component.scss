@@ -3,9 +3,9 @@
 
 
 .moreInfo {
-    margin-top: 100px;
+    margin-top: 5vw;
     font-family: "Lexend", sans-serif;
-    margin-bottom: 100px;
+    // margin-bottom: 2vw;
 
     .title {
         display: flex;
@@ -43,8 +43,8 @@
                 50%
               );
                 // clip-path: ellipse(rx ry at cx cy);
-                // em que rx: raio horizontal; 
-                // ry: raio vertical; 
+                // em que rx: raio horizontal;
+                // ry: raio vertical;
                 // cx: especifica a posição do centro em relação a X;
                 // cy: especifica a posicação do centro em relação a y
 
