@@ -7,6 +7,8 @@ article {
   position: relative;
   width: 100%;
   overflow: hidden;
+  max-height: 35vw;
+
 
   .prevBtn, .nextBtn {
     user-select: none;
@@ -50,12 +52,15 @@ article {
 }
 
 .carouselDiv {
-  display: flex; 
-  transition: transform 0.5s ease-in-out; 
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 
   .carouselImage {
-    min-width: 100%; 
-    position: relative; 
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
   }
 
   img {
@@ -68,24 +73,24 @@ article {
   .textDiv {
     font-family: "Lexend", sans-serif;
     position: absolute;
-    top: 80px;
-    left: 150px;
+    top: 20%;
+    left: 8%;
     z-index: 2;
     padding: 10px;
-    
+
     h1 {
         width: 80%;
-       font-size: 5vw; 
+       font-size: 5vw;
        color: $xBege;
        font-weight: 700;
        padding-bottom: 1vw;
 
-     
+
     }
 
     p {
         width: 60%;
-       font-size: 1.4vw; 
+       font-size: 1.4vw;
        color: white;
        font-weight: 600;
        padding-bottom: 2.5vw;
@@ -109,9 +114,32 @@ article {
     }
 
   }
+
+  @media screen and (min-width: 1800px) {
+    article {
+      max-height: 65vw;
+    }
+
+    .textDiv {
+      top: 15% !important;
+      left: 8%;
+    }
+  }
+
+  @media screen and (max-width: 1250px) {
+
+    .textDiv {
+      top: 30% !important;
+      left: 8%;
+    }
+
+  }
+
 }
 
 .carouselDiv.active {
   //display: block;
   opacity: 1;
 }
+
+

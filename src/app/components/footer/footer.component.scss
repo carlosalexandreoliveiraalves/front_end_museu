@@ -1,39 +1,33 @@
 @import "../../cores-principais.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-body {
-    line-height: 1.5;
-    font-family: "Lexend", sans-serif;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+
+
+
   .container {
     max-width: 1170px;
     margin: auto;
   }
-  
+
   .row {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   ul {
     list-style: none;
   }
-  
+
   .footer {
-    background-color: $xMarromEscuro;
+    background-color: $xMarromExtraEscuro;
     padding: 70px 0;
-  
+    font-family: "Lexend", sans-serif;
+    // border-top: 5px solid black;
+
     .footer-col {
       width: 25%;
       padding: 0 15px;
-  
+
       h4 {
         font-size: 18px;
         color: #ffffff;
@@ -41,7 +35,7 @@ body {
         margin-bottom: 35px;
         font-weight: 500;
         position: relative;
-  
+
         &::before {
           content: '';
           position: absolute;
@@ -53,13 +47,14 @@ body {
           width: 50px;
         }
       }
-  
+
       ul {
+        padding-left: 10px;
         li {
           &:not(:last-child) {
             margin-bottom: 10px;
           }
-  
+
           a {
             font-size: 16px;
             text-transform: capitalize;
@@ -68,7 +63,7 @@ body {
             font-weight: 300;
             display: block;
             transition: all 0.3s ease;
-  
+
             &:hover {
               font-weight: 400;
               //color: $xMarromExtraEscuro;
@@ -79,21 +74,21 @@ body {
           }
         }
       }
-      
+
       .social-links {
         a {
           font-size: x-large;
           display: inline-block;
           height: 50px;
           width: 50px;
-          background-color: rgba(255, 255, 255, 0.2);
+          background-color: $xBege;
           margin: 0 10px 10px 0;
           text-align: center;
           line-height: 50px;
           border-radius: 50%;
           color: $xMarromExtraEscuro;
           transition: all 0.5s ease;
-  
+
           &:hover {
             transition: 0.7s;
             height: 55px;
@@ -106,7 +101,7 @@ body {
       }
     }
   }
-  
+
   /* Responsive */
   @media (max-width: 767px) {
     .footer-col {
@@ -114,10 +109,9 @@ body {
       margin-bottom: 30px;
     }
   }
-  
+
   @media (max-width: 574px) {
     .footer-col {
       width: 100%;
     }
   }
-  
