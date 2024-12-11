@@ -1,6 +1,18 @@
+@import "../app/cores-principais";
+
 @mixin display-row-mixin() {
     display: flex;
     flex-direction: row;
+}
+
+@mixin mainFontFamily() {
+  font-family: "Lexend", sans-serif;
+}
+
+@mixin mainText($corFonte, $tamanhoFonte, $pesoFonte) {
+  font-size: $tamanhoFonte;
+  color: $corFonte;
+  font-weight: $pesoFonte;
 }
 
 @mixin second-title() {
@@ -8,3 +20,27 @@
     color: black;
     font-weight: 600;
 }
+
+@mixin paragraph(){
+  font-size: 1.4vw;
+}
+
+@mixin btnMoreInfo($corFonte, $corFundo, $corBorda) {
+  font-size: 1.5vw;
+  padding: 0.6vw 1vw 0.6vw 1vw;
+  border: 2px solid $corBorda;
+  border-radius: 5px;
+  background-color: $corFundo;
+  color: $corFonte;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@mixin btnMoreInfoHover($corFonte, $corFundo, $corBorda) {
+  transition: 0.3s;
+  color: $corFonte;
+  background-color: $corFundo;
+  border: 2px solid $corBorda;
+}
+
+

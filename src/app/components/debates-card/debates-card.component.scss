@@ -6,17 +6,24 @@ article {
   font-family: "Lexend", sans-serif;
 
   section {
-    background-color: $xBege;
+    padding-top: 4vw;
+    background-color: $xMarromExtraEscuro;
     height: 40vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
 
     div {
       height: 80%;
     }
+
+    // @mixin mainText($corFonte, $tamanhoFonte, $pesoFonte) {
+    //   font-size: $tamanhoFonte;
+    //   color: $corFonte;
+    //   font-weight: $pesoFonte;
+    // }
 
     .text {
       width: 40%;
@@ -25,34 +32,25 @@ article {
       gap: 1.5vw;
 
       h1 {
-        font-size: 2vw;
-        color: $xMarromEscuro;
-        margin-top: 2vw;
-        font-weight: 300;
+        @include mainText($xBranco, 2vw, 300);
       }
 
       h2 {
-        font-size: 1.5vw;
-        margin-bottom: 1vw;
-        font-weight: 600;
-      }
-
-      h3 {
-          @include mainText($xMarromEscuro, 1.5vw, normal);
+        @include mainText($xBege, 1.5vw, normal);
       }
 
       p {
-        font-size: 1.4vw;
+        @include mainText($xBege, 1.4vw, normal);
+
       }
 
       a {
-        @include btnMoreInfo(black, rgba(241, 241, 241, 0), black); //$corFonte, $corFundo, $corBorda
+        @include btnMoreInfo(rgb(255, 255, 255), rgba(0, 0, 0, 0.211), rgb(255, 255, 255)); //$corFonte, $corFundo, $corBorda
         width: 40%;
-        cursor: pointer;
       }
 
       a:hover {
-        @include btnMoreInfoHover(white, black, rgba(244, 244, 244, 0));
+        @include btnMoreInfoHover(rgb(0, 0, 0), rgb(255, 255, 255), rgba(4, 4, 4, 0));
       }
     }
 
