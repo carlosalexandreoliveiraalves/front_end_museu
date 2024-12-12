@@ -32,16 +32,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+            <a class="nav-link active" aria-current="page" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" routerLink="/feiras">Feiras</a>
+            <a class="nav-link active" routerLink="/feiras" routerLinkActive="active-link">Feiras</a>
           </li>
 
           <!-- DROPDOWN DAS EXPOSIÇÕES -->
           <!-- <li class="nav-item dropdown">
-             Botão que abre o dropdown 
+             Botão que abre o dropdown
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -52,7 +52,7 @@
               Exposições
             </a>
 
-            COnteúdo do dropdown 
+            COnteúdo do dropdown
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Arte moderna</a></li>
               <li><a class="dropdown-item" href="#">Paleontologia</a></li>
@@ -63,18 +63,18 @@
 
 
           <li class="nav-item">
-            <a class="nav-link active" routerLink="/exposicoes">Exposições</a>
+            <a class="nav-link active" routerLink="/exposicoes" routerLinkActive="active-link">Exposições</a>
           </li>
 
 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/artistas">
+            <a class="nav-link active" aria-current="page" routerLink="/artistas" routerLinkActive="active-link">
               Artistas
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/editorial">
+            <a class="nav-link active" aria-current="page" routerLink="/editorial" routerLinkActive="active-link">
               Editorial</a
             >
           </li>
@@ -86,7 +86,7 @@
 
       <div class="busca">
 
-      
+
 
         <input
         type="search"
@@ -94,7 +94,7 @@
         placeholder="Procure por obras, expositores, artistas etc."
         aria-label="Search"
         aria-describedby="search-addon"
-        
+
       />
 
       <a type="button">
@@ -120,7 +120,7 @@
         </div>
 
       </div>
-   
+
 
     </div>
   </nav>

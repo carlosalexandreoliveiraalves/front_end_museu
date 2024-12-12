@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgOptimizedImage, RouterLink, CommonModule],
+  imports: [NgOptimizedImage, RouterLink, CommonModule, RouterLinkActive],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -26,5 +26,10 @@ export class HeaderComponent implements OnInit {
       this.headerFixed = false;
     }
   }
+
+  if () {
+
+  }
+
 
 }
