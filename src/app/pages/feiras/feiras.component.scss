@@ -1,0 +1,216 @@
+@import "../../cores-principais.scss";
+@import "../../functions.scss";
+
+article {
+  display: flex;
+  flex-direction: column;
+  @include mainFontFamily();
+
+  .atualFeiraSection {
+    height: 40vw;
+    background-image: url("../../../assets/vanGoghFeira.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(15% 20%, 100% 0, 80% 82%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+
+    h1 {
+      @include mainText(
+        $xMarromExtraEscuro,
+        3vw,
+        500
+      ); //$corFonte, $tamanhoFonte, $pesoFonte
+      background-color: rgb(255, 255, 255);
+      border-radius: 40px 0 40px 0;
+      padding: 0.6vw;
+    }
+
+    h2 {
+      @include mainText(
+        $xMarromEscuro,
+        3vw,
+        500
+      ); //$corFonte, $tamanhoFonte, $pesoFonte
+      background-color: rgb(255, 255, 255);
+      border-radius: 0px 40px 0px 40px;
+      padding: 0.6vw;
+    }
+  }
+
+  .firstContentSection {
+    margin-top: 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vw;
+
+    h1 {
+      @include mainText($xMarromExtraEscuro, 4vw, 300);
+    }
+
+    .contentDiv {
+      margin: 4vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-around;
+        width: 45%;
+        background-color: $xBege;
+        border-radius: 2vw 0 2vw 0;
+        padding: 2vw;
+        z-index: 1;
+
+        h2 {
+          @include mainText($xMarromExtraEscuro, 3vw, 500);
+        }
+
+        p {
+          @include mainText(black, 1.5vw, 500);
+          margin-bottom: 2vw;
+        }
+
+        a {
+          @include btnMoreInfo(
+            black,
+            rgba(241, 241, 241, 0),
+            black
+          ); //$corFonte, $corFundo, $corBorda
+          width: 40%;
+          text-align: center;
+        }
+
+        a:hover {
+          @include btnMoreInfoHover(white, black, rgba(244, 244, 244, 0));
+        }
+      }
+
+      .image {
+        width: 50%;
+        margin-bottom: -10vw;
+        margin-left: -10vw;
+
+        img {
+          width: 80%;
+          object-fit: cover;
+          border-radius: 0 2vw 0 2vw;
+        }
+      }
+    }
+  }
+
+  .secondContentSection {
+    margin-top: -2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4vw;
+
+
+
+    .contentDiv {
+      margin: 4vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 45%;
+        background-color: $xMarromExtraEscuro;
+        border-radius: 2vw 0 2vw 0;
+        padding: 2vw;
+        z-index: 1;
+
+
+        h2 {
+          @include mainText($xBranco, 3vw, 500);
+        }
+
+        p {
+          @include mainText(white, 1.5vw, 500);
+          margin-bottom: 2vw;
+        }
+
+        a {
+          @include btnMoreInfo(rgb(255, 255, 255), rgba(0, 0, 0, 0.211), rgb(255, 255, 255)); //$corFonte, $corFundo, $corBorda
+          width: 40%;
+          text-align: center;
+        }
+
+        a:hover {
+          @include btnMoreInfoHover(rgb(0, 0, 0), rgb(255, 255, 255), rgba(4, 4, 4, 0));
+        }
+      }
+
+      .image {
+        width: 50%;
+        margin-bottom: -10vw;
+        margin-right: -17vw;
+
+        img {
+          width: 80%;
+          object-fit: cover;
+          border-radius: 0 2vw 0 2vw;
+        }
+      }
+    }
+  }
+
+  .exposicaoSection {
+    height: 40vw;
+    background: url("../../../assets/imagemFundoFeira.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 80% 16%, 100% 100%, 15% 71%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+
+    h1 {
+      @include mainText(
+        $xMarromExtraEscuro,
+        3vw,
+        500
+      ); //$corFonte, $tamanhoFonte, $pesoFonte
+      background-color: rgb(255, 255, 255);
+      border-radius: 40px 0 40px 0;
+      padding: 0.6vw;
+    }
+
+    a {
+      @include btnMoreInfo(
+        white,
+        rgba(0, 0, 0, 0.891),
+        rgba(0, 0, 0, 0)
+      ); //$corFonte, $corFundo, $corBorda
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    a:hover {
+      @include btnMoreInfoHover(black, white, white);
+    }
+  }
+}

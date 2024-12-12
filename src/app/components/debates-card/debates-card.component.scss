@@ -5,7 +5,7 @@
 article {
   font-family: "Lexend", sans-serif;
 
-  section {
+  .firstSection {
     padding-top: 4vw;
     background-color: $xMarromExtraEscuro;
     height: 40vw;
@@ -13,7 +13,8 @@ article {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+
 
     div {
       height: 80%;
@@ -41,7 +42,6 @@ article {
 
       p {
         @include mainText($xBege, 1.4vw, normal);
-
       }
 
       a {
@@ -51,6 +51,72 @@ article {
 
       a:hover {
         @include btnMoreInfoHover(rgb(0, 0, 0), rgb(255, 255, 255), rgba(4, 4, 4, 0));
+      }
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+
+
+      img{
+        width: 120%;
+        height: 100%;
+        object-fit: contain;
+        overflow: hidden;
+        border-radius: 3px;
+       }
+    }
+  }
+
+  .secondSection {
+    padding-top: 4vw;
+    background-color: $xBranco;
+    height: 40vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+
+    div {
+      height: 80%;
+    }
+
+    // @mixin mainText($corFonte, $tamanhoFonte, $pesoFonte) {
+    //   font-size: $tamanhoFonte;
+    //   color: $corFonte;
+    //   font-weight: $pesoFonte;
+    // }
+
+    .text {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5vw;
+
+      h1 {
+        @include mainText($xMarromExtraEscuro, 2vw, 300);
+      }
+
+      h2 {
+        @include mainText($xPreto, 1.5vw, normal);
+      }
+
+      p {
+        @include mainText(black, 1.4vw, normal);
+      }
+
+      a {
+        @include btnMoreInfo(black, rgba(241, 241, 241, 0), black); //$corFonte, $corFundo, $corBorda
+        width: 40%;
+        cursor: pointer;
+      }
+
+      a:hover {
+        @include btnMoreInfoHover(white, black, rgba(244, 244, 244, 0));
       }
     }
 

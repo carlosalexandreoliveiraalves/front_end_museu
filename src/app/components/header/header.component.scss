@@ -1,6 +1,12 @@
 @import "../../cores-principais.scss";
 @import "../../functions.scss";
 
+.active-link {
+  transition: 0.3s;
+  color: $xMarromEscuro;
+  box-shadow: $xMarromEscuro 0px 10px, $xMarromClaro 0px 20px, $xBege 0px 30px;
+}
+
 header {
     padding-top: 0.5vw;
     transition: transform 0.3s ease;
@@ -18,7 +24,7 @@ header {
 
 .notfixed {
     position: static;
-    transform: translateY(0px); 
+    transform: translateY(0px);
 }
 
 nav {
@@ -28,11 +34,11 @@ nav {
     width: 100% !important;
     background-color: white !important;
     border-bottom: 1px solid black;
-    
-    
+
+
 
     .logo {
-       
+
         img {
             border-radius: 100px;
             border: 5px solid $xMarromEscuro;
@@ -57,10 +63,10 @@ nav {
         font-family: "Lexend", sans-serif;
         font-weight: 500;
         padding: 0;
-        
+
 
         #navbarSupportedContent {
-           
+
             .navbar-nav {
 
                 ul {
@@ -73,7 +79,7 @@ nav {
                     a {
                         margin-left: 0;
                     }
-                  
+
                     a:hover {
                         transition: 0.3s;
                         color: $xMarromEscuro;
@@ -120,7 +126,7 @@ nav {
                 justify-content: center;
                 align-items: center;
                 margin: 0;
-                
+
                 span {
                     margin-left: 0.4vw;
                     font-size: 1.6vw;
