@@ -1,17 +1,18 @@
 import { CommonModule, NgFor, NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-agenda',
   standalone: true,
-  imports: [NgFor, CommonModule, NgOptimizedImage],
+  imports: [NgFor, CommonModule, NgOptimizedImage, RouterLink],
   templateUrl: './agenda.component.html',
   styleUrl: './agenda.component.scss'
 })
 export class AgendaComponent {
 
 
-  
+
   readonly cardInfo = [
     {
       dayOfWeek: "Segunda",
@@ -51,6 +52,6 @@ export class AgendaComponent {
   ];
 
 
-  
+
 
 }

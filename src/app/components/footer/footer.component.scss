@@ -1,9 +1,6 @@
 @import "../../cores-principais.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-
-
-
   .container {
     max-width: 1170px;
     margin: auto;
@@ -103,15 +100,101 @@
   }
 
   /* Responsive */
-  @media (max-width: 767px) {
-    .footer-col {
-      width: 50%;
-      margin-bottom: 30px;
+  @media (max-width: 600px) {
+    #none {
+      display: none !important;
     }
+    .row {
+      display: flex;
+      flex-direction: row !important;
+    }
+
+    .footer-col {
+      width: 100% !important;
+      margin-bottom: 30px;
+
+      h4 {
+        font-size: 14px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          background-color: $xMarromExtraEscuro;
+          height: 2px;
+          box-sizing: border-box;
+          width: 50px;
+        }
+      }
+
+      ul {
+        width: 100%;
+        padding-left: 10px;
+        display: inline-block;
+        padding: 0 !important;
+        display: inline-flex !important;
+        justify-content: space-between;
+        li {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+
+          a {
+            font-size: 13px;
+            text-transform: capitalize;
+            color: white;
+            text-decoration : none;
+            font-weight: 300;
+            display: block;
+            transition: all 0.3s ease;
+
+            &:hover {
+              font-weight: 400;
+              //color: $xMarromExtraEscuro;
+              transition: 0.7s;
+              font-size: 16px;
+              padding-left: 8px;
+            }
+          }
+        }
+      }
+
+      .social-links {
+        a {
+          font-size: x-large;
+          display: inline-block;
+          height: 50px;
+          width: 50px;
+          background-color: $xBege;
+          margin: 0 10px 10px 0;
+          text-align: center;
+          line-height: 50px;
+          border-radius: 50%;
+          color: $xMarromExtraEscuro;
+          transition: all 0.5s ease;
+
+          &:hover {
+            transition: 0.7s;
+            height: 55px;
+            width: 55px;
+            line-height: 55px;
+            color: $xMarromExtraEscuro;
+            background-color: #ffffff;
+          }
+        }
+      }
+    }
+
   }
 
-  @media (max-width: 574px) {
-    .footer-col {
-      width: 100%;
-    }
-  }
+
+@media screen and (max-width: 645px) {
+
+}
+
