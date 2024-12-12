@@ -27,7 +27,7 @@ export class CarouselComponent  {
       text: "Obras que refletem a essência do século XX e XXI, com inovação, cores vibrantes e instalações que expressam a diversidade e transformação cultural."
     }
   ];
-  
+
 
   currentIndex = 0;
 
@@ -43,4 +43,40 @@ export class CarouselComponent  {
   get slideOffset() {
     return -this.currentIndex * 100; // Desloca para a esquerda
   }
+
+
+  touchStartX = 0; // Ponto inicial do toque
+  touchEndX = 0;   // Ponto final do toque
+  isDragging = false; // Indica se o usuário está arrastando
+
+onTouchStart(event: TouchEvent): void {
+  this.touchStartX = event.touches[0].clientX;
+  this.isDragging = true;
+}
+
+onTouchMove(event: TouchEvent): void {
+  if (this.isDragging) {
+    this.touchEndX = event.touches[0].clientX;
+  }
+}
+
+onTouchEnd(): void {
+  this.isDragging = false;
+  const swipeDistance = this.touchStartX - this.touchEndX;
+
+  // Define um limite mínimo para considerar o movimento como um "deslize"
+  const swipeThreshold = 50;
+
+  if (swipeDistance > swipeThreshold) {
+    // Próxima imagem (deslize para a esquerda)
+    this.nextImage();
+  } else if (swipeDistance < -swipeThreshold) {
+    // Imagem anterior (deslize para a direita)
+    this.prevImage();
+  }
+
+  // Reseta os valores de toque
+  this.touchStartX = 0;
+  this.touchEndX = 0;
+}
 }
