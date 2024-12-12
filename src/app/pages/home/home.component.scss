@@ -1,88 +1,199 @@
 @import "../../cores-principais.scss";
 @import "../../functions.scss";
 
-
 .moreInfo {
+  margin-top: 5vw;
+  font-family: "Lexend", sans-serif;
+  // margin-bottom: 2vw;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vw;
+    h1 {
+      font-size: 4vw;
+    }
+  }
+
+  .imageDiv {
+    background-image: url("../../../assets/exposicaoMuseu.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 40vw;
+    background-size: 100% auto;
+    display: flex;
+    justify-content: end;
+
+    .infoBox {
+      color: white;
+      background: $xMarromEscuro;
+      opacity: 0.97;
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3vw;
+      clip-path: ellipse(100% 150% at 100% 50%);
+      // clip-path: ellipse(rx ry at cx cy);
+      // em que rx: raio horizontal;
+      // ry: raio vertical;
+      // cx: especifica a posição do centro em relação a X;
+      // cy: especifica a posicação do centro em relação a y
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 90%;
+
+        h1 {
+          font-size: 3.5vw;
+          font-weight: 700;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 1.2vw;
+        }
+
+        a {
+          font-size: 2vw;
+          text-align: center;
+          @include btnMoreInfo(
+            rgb(255, 255, 255),
+            rgba(0, 0, 0, 0.211),
+            rgb(255, 255, 255)
+          ); //$corFonte, $corFundo, $corBorda
+          width: 40%;
+        }
+
+        a:hover {
+          @include btnMoreInfoHover(
+            rgb(0, 0, 0),
+            rgb(255, 255, 255),
+            rgba(4, 4, 4, 0)
+          );
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .moreInfo {
     margin-top: 5vw;
     font-family: "Lexend", sans-serif;
     // margin-bottom: 2vw;
 
     .title {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 1vw;
-        h1 {
-            font-size: 4vw;
-        }
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1vw;
+      h1 {
+        font-size: 40px !important;
+        text-align: center;
+      }
     }
 
     .imageDiv {
-        background-image: url("../../../assets/exposicaoMuseu.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        height: 40vw;
-        background-size: 100% auto;
-        display: flex;
-        justify-content: end;
+      background-image: url("../../../assets/exposicaoMuseu.jpg");
+      background-repeat: no-repeat;
+      background-attachment: scroll !important;
+      background-size: cover;
+      background-position: center;
+      height: 60vw;
+      background-size: 100% auto;
+      display: flex;
+      justify-content: end;
 
+      .infoBox {
+        width: 65%;
+        opacity: 0.9;
+        padding: 6vw;
+        .info {
+          h1 {
+            font-size: 35px;
+            font-weight: 700;
+          }
 
-        .infoBox {
-            color: white;
-            background: $xMarromEscuro;
-            opacity: 0.97;
-            width: 45%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 3vw;
-            clip-path: ellipse(
-                100%
-                150%
-                at
-                100%
-                50%
-              );
-                // clip-path: ellipse(rx ry at cx cy);
-                // em que rx: raio horizontal;
-                // ry: raio vertical;
-                // cx: especifica a posição do centro em relação a X;
-                // cy: especifica a posicação do centro em relação a y
+          p {
+            font-weight: 500;
+            font-size: 17px;
+          }
 
-                .info {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    height: 90%;
+          a {
+            @include btnMoreInfo(
+              rgb(255, 255, 255),
+              rgba(0, 0, 0, 0.211),
+              rgb(255, 255, 255)
+            ); //$corFonte, $corFundo, $corBorda
+            width: 40%;
+            font-size: 15px;
+          }
 
-                    h1 {
-                        font-size: 3.5vw;
-                        font-weight: 700;
-                    }
+          a:hover {
+            @include btnMoreInfoHover(
+              rgb(0, 0, 0),
+              rgb(255, 255, 255),
+              rgba(4, 4, 4, 0)
+            );
+          }
 
-                    p {
-                        font-weight: 500;
-                        font-size: 1.2vw;
-                    }
-
-                    a {
-                        text-align: center;
-                        width: 40%;
-                        color: white;
-                        text-decoration: none;
-                        border: 3px solid $xBranco;
-                        padding: 10px;
-                        border-radius: 10px;
-                        font-size: 1.2vw;
-                    }
-
-                    a:hover {
-                        transition: 0.4s;
-                        background-color: white;
-                        color: black;
-                    }
-                }
+          a:hover {
+            transition: 0.4s;
+            background-color: white;
+            color: black;
+          }
         }
+      }
     }
-
-
+  }
 }
+
+@media screen and (max-width: 645px) {
+  .imageDiv {
+    height: 65vw !important;
+    max-height: 75vw !important;
+  }
+
+  .infoBox {
+    width: 90% !important;
+
+    .info {
+      h1 {
+        font-size: 20px !important;
+        font-weight: 700;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 13px !important;
+      }
+
+      a {
+        @include btnMoreInfo(
+          rgb(255, 255, 255),
+          rgba(0, 0, 0, 0.211),
+          rgb(255, 255, 255)
+        ); //$corFonte, $corFundo, $corBorda
+        width: 40%;
+        font-size: 15px !important;
+      }
+
+      a:hover {
+        @include btnMoreInfoHover(
+          rgb(0, 0, 0),
+          rgb(255, 255, 255),
+          rgba(4, 4, 4, 0)
+        );
+      }
+
+      a:hover {
+        transition: 0.4s;
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+

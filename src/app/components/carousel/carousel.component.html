@@ -3,6 +3,9 @@
   <div
     class="carouselDiv"
     [ngStyle]="{ transform: 'translateX(' + slideOffset + '%)' }"
+    (touchstart)="onTouchStart($event)"
+    (touchmove)="onTouchMove($event)"
+    (touchend)="onTouchEnd()"
   >
     <div
       *ngFor="let item of carouselItems; let i = index"
