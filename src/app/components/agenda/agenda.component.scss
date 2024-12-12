@@ -4,10 +4,10 @@
 article {
     margin-top: 2vw;
     padding: 2vw;
-  
+
     .articleTitle {
       font-family: "Lexend", sans-serif;
-  
+
       h1 {
         @include second-title;
         text-align: center;
@@ -20,8 +20,8 @@ article {
       }
     }
   }
-  
-  .agenda {
+
+.agenda {
     font-family: "Lexend", sans-serif;
     border-radius: 10px;
     display: flex;
@@ -32,7 +32,7 @@ article {
     margin-bottom: 50px;
     position: relative;
 
-  
+
     .card {
       @include display-row-mixin;
       align-items: center;
@@ -43,7 +43,7 @@ article {
       margin-bottom: -5vw;
       transition: transform 0.5s ease, margin 0.5s ease, box-shadow 0.5s ease;
       cursor: pointer;
-  
+
       .dateDay {
         display: flex;
         flex-direction: column;
@@ -52,52 +52,69 @@ article {
         padding-right: 2vw;
         border-right: 4px solid black;
         width: 20vw;
-  
+
         h2 {
-          @include second-title;
+          color: black;
+          font-size: 2.5vw;
+          font-weight: 600;
         }
-  
+
         p {
           font-size: 2vw;
           color: $xMarromEscuro;
           font-weight: 550;
         }
+
+
       }
-  
+
       .cardInfo {
         @include display-row-mixin;
         align-items: center;
-  
+
         .text {
           width: 50vw;
           margin-right: 2vw;
-  
+
           h2 {
-            @include second-title;
+            font-size: 2.5vw;
+            color: black;
+            font-weight: 600;
           }
-  
+
           p {
             font-size: 1vw;
             color: $xPreto;
             font-weight: 550;
+            margin-bottom: 2vw;
+          }
+
+          a {
+            @include btnMoreInfo(black, rgba(241, 241, 241, 0), black); //$corFonte, $corFundo, $corBorda
+            width: 40%;
+            cursor: pointer;
+          }
+
+          a:hover {
+            @include btnMoreInfoHover(white, black, rgba(244, 244, 244, 0));
           }
         }
-  
+
         .image {
           width: 15vw;
           display: flex;
           justify-content: center;
           align-items: center;
-  
+
           img {
               border: 1px solid $xBege;
               border-radius: 10px;
           }
         }
-  
+
       }
     }
-  
+
     .card:hover {
       z-index: 2;
       margin-top: 4vw;
@@ -105,5 +122,182 @@ article {
       transform: translateY(-2vw);
       box-shadow: rgba(100, 100, 111, 0.4) 0px 15px 29px 0px;
     }
+}
+
+@media screen and (max-width: 1100px) {
+
+  article {
+    margin-top: 2vw;
+    padding: 2vw;
+
+    .articleTitle {
+      font-family: "Lexend", sans-serif;
+
+      h1 {
+        font-size: 35px !important;
+      }
+
+      p {
+        font-size: 20px !important;
+      }
+    }
   }
-  
+
+  .card {
+    display: flex;
+    flex-direction: column !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px !important;
+
+    .dateDay {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 2vw;
+      padding-right: 2vw;
+      border-right: none !important;
+      width: 20vw;
+
+      h2 {
+        font-size: 30px !important;
+      }
+
+      p {
+        font-size: 25px !important;
+
+      }
+    }
+
+    .cardInfo {
+      @include display-row-mixin;
+      align-items: center;
+      gap: 20px !important;
+
+      .text {
+        width: 50vw;
+        margin-right: 2vw;
+
+        h2 {
+          display: none;
+        }
+
+        p {
+          font-size: 15px !important;
+          color: $xPreto;
+          font-weight: 550;
+          width: 90%;
+        }
+
+        a {
+          font-size: 25px !important;
+          width: 100%;
+        }
+      }
+
+      .image {
+        width: 15vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            border: 1px solid $xBege;
+            border-radius: 10px;
+        }
+      }
+
+    }
+  }
+
+
+  .image {
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        border: 1px solid $xBege;
+        border-radius: 10px;
+        width: 240px;
+        height: 240px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .card {
+    display: flex;
+    flex-direction: column !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
+    height: auto !important;
+
+    .dateDay {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 2vw;
+      padding-right: 2vw;
+      border-right: none !important;
+      width: 20vw;
+
+      h2 {
+        font-size: 30px !important;
+      }
+
+      p {
+        font-size: 20px !important;
+      }
+    }
+
+    .cardInfo {
+      display: flex;
+      flex-direction: column-reverse !important;
+      align-items: center !important;
+      gap: 20px !important;
+      width: 100%;
+
+      .text {
+        width: 90% !important;
+        margin-right: 2vw;
+        padding-bottom: 20px !important;
+        gap: 10px !important;
+
+        h2 {
+          display: none;
+        }
+
+        p {
+          font-size: 15px !important;
+          color: $xPreto;
+          font-weight: 550;
+          width: 100%;
+        }
+
+        a {
+          font-size: 25px;
+          width: 100% !important;
+        }
+      }
+
+      .image {
+        width: 15vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            border: 1px solid $xBege;
+            border-radius: 10px;
+            width: 200px !important;
+            height: 200px !important;
+        }
+      }
+
+    }
+  }
+}

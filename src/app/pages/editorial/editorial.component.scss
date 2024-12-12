@@ -74,3 +74,110 @@ article {
   }
 
 }
+
+@media screen and (max-width: 950px) {
+
+  article {
+    font-family: "Lexend", sans-serif;
+
+    section {
+      background-color: $xBege;
+      height: 60vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+
+      div {
+        height: 80%;
+      }
+
+      .text {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vw;
+        padding-left: 15px;
+
+        h1 {
+          font-size: 22px;
+          color: $xMarromEscuro;
+          margin-top: 2vw;
+          font-weight: 300;
+        }
+
+        h2 {
+          font-size: 16px;
+          margin-bottom: 1vw;
+          font-weight: 600;
+        }
+
+        h3 {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        a {
+          font-size: 16px; //$corFonte, $corFundo, $corBorda
+          width: 50%;
+          cursor: pointer;
+          text-align: center;
+        }
+
+        a:hover {
+          @include btnMoreInfoHover(white, black, rgba(244, 244, 244, 0));
+        }
+      }
+
+      .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+
+
+        img{
+          width: 80%;
+          height: 100%;
+          object-fit: contain;
+          overflow: hidden;
+          border-radius: 3px;
+         }
+      }
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 720px) {
+  section {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    clip-path: polygon(0 0, 100% 0, 88% 50%, 100% 100%, 0 100%, 12% 50%) !important;
+    height: auto !important;
+    padding-bottom: 50px !important;
+    padding-top: 20px !important;
+
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+
+
+      img{
+        width: 60% !important;
+        height: 60% !important;
+        object-fit: contain;
+        overflow: hidden;
+        border-radius: 3px;
+       }
+    }
+  }
+}

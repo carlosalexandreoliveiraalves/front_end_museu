@@ -4,7 +4,8 @@
 .active-link {
   transition: 0.3s;
   color: $xMarromEscuro;
-  box-shadow: $xMarromEscuro 0px 10px, $xMarromClaro 0px 20px, $xBege 0px 30px;
+  transform: scale(1.1);
+  border-bottom: 4px solid $xMarromEscuro;
 }
 
 header {
@@ -29,13 +30,11 @@ header {
 
 nav {
     @include display-row-mixin;
-    align-items: center !important;
-    justify-content: space-evenly !important;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100% !important;
     background-color: white !important;
     border-bottom: 1px solid black;
-
-
 
     .logo {
 
@@ -56,7 +55,6 @@ nav {
     }
 
     .container-fluid {
-
         font-size: 1.4vw;
         margin: 0;
         width: 40%;
@@ -84,7 +82,7 @@ nav {
                         transition: 0.3s;
                         color: $xMarromEscuro;
                         //border-bottom: 2px solid $xMarromEscuro;
-                        box-shadow: $xMarromEscuro 0px 10px, $xMarromClaro 0px 20px, $xBege 0px 30px;
+                        //box-shadow: $xMarromEscuro 0px 10px, $xMarromClaro 0px 20px, $xBege 0px 30px;
 
                     }
                 }
@@ -185,3 +183,81 @@ nav {
     }
 }
 
+@media screen and (max-width: 1100px) {
+
+  .logo {
+
+    img {
+        border-radius: 100px;
+        border: 5px solid $xMarromEscuro;
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
+
+
+  .active-link {
+    transition: 0.3s;
+    color: $xMarromEscuro;
+    transform: scale(1.1);
+  }
+
+  header {
+    height: auto !important;
+  }
+
+  nav {
+    justify-content: space-around !important;
+
+    .container-fluid {
+      position: relative;
+      right: 0;
+      z-index: 100;
+      display: contents;
+
+      ul {
+        display: flex;
+        align-items: center;
+
+
+        li {
+          a {
+            @include mainText(black, 25px, 500);
+          }
+        }
+      }
+    }
+  }
+
+
+  #navbarSupportedContent {
+
+    .navbar-nav {
+
+        ul {
+            margin: 0 !important;
+        }
+
+        li {
+            margin-right: 2vw;
+
+            a {
+                margin-left: 0;
+            }
+
+            a:hover {
+                transition: 0.3s;
+                color: $xMarromEscuro;
+                //border-bottom: 2px solid $xMarromEscuro;
+                box-shadow: none !important;
+
+            }
+        }
+    }
+}
+
+.busca-idioma {
+  display: none !important;
+}
+
+}
