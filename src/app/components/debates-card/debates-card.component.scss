@@ -7,13 +7,17 @@ article {
 
   .firstSection {
     padding-top: 4vw;
-    background-color: $xMarromExtraEscuro;
-    height: 40vw;
+    background-image: url("../../../assets/darkLibrary.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 45vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    clip-path: polygon(0 0, 100% 20%, 100% 80%, 0% 100%);
+    clip-path: polygon(0 0, 0 100%, 27% 97%, 44% 86%, 65% 95%, 82% 86%, 100% 92%, 100% 18%, 77% 21%, 60% 6%, 33% 12%);
+
 
 
     div {
@@ -31,9 +35,11 @@ article {
       display: flex;
       flex-direction: column;
       gap: 1.5vw;
+      background-color: rgba(0, 0, 0, 0.746);
+      padding: 1vw;
 
       h1 {
-        @include mainText($xBranco, 2vw, 300);
+        @include mainText($xBranco, 2vw, 600);
       }
 
       h2 {
@@ -46,7 +52,8 @@ article {
 
       a {
         @include btnMoreInfo(rgb(255, 255, 255), rgba(0, 0, 0, 0.211), rgb(255, 255, 255)); //$corFonte, $corFundo, $corBorda
-        width: 40%;
+        width: 60%;
+        text-align: center;
       }
 
       a:hover {
@@ -73,13 +80,14 @@ article {
 
   .secondSection {
     padding-top: 4vw;
-    background-color: $xBranco;
+    background-color: $xBege;
     height: 40vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 17%, 67% 6%, 45% 14%, 28% 3%);
+
 
     div {
       height: 80%;
@@ -111,8 +119,9 @@ article {
 
       a {
         @include btnMoreInfo(black, rgba(241, 241, 241, 0), black); //$corFonte, $corFundo, $corBorda
-        width: 40%;
+        width: 60%;
         cursor: pointer;
+        text-align: center;
       }
 
       a:hover {
@@ -143,8 +152,10 @@ article {
 @media screen and (max-width: 1250px)  {
 
   .firstSection, .secondSection {
-    height: 70vw !important;
-
+    height: auto !important;
+    clip-path: none !important;
+    padding-bottom: 5vw;
+    clip-path: polygon(100% 0, 100% 100%, 50% 95%, 0 100%, 0 0) !important;
     .text {
       width: 80% !important;
       display: flex;
@@ -169,6 +180,7 @@ article {
         width: 90% !important;
         cursor: pointer;
         text-align: center;
+        font-size: 1.2em !important;
       }
 
       a:hover {
@@ -193,22 +205,70 @@ article {
     }
   }
 
+  .firstSection {
+    .text {
+    background-color: black !important;
+    border-radius: 20px 0 0 20px;
+    padding: 30px !important;
+    }
+
+    .image {
+      img {
+        width: 100% !important;
+        height: 100% !important;
+        margin-right: -20% !important;
+      }
+    }
+  }
+
 }
 
-@media screen and (max-width: 720px)  {
+@media screen and (max-width: 550px)  {
   .firstSection {
     display: flex !important;
     flex-direction: column !important;
-    clip-path: polygon(0 0, 100% 0, 88% 50%, 100% 100%, 0 100%, 12% 50%) !important;
     height: auto !important;
+    padding-bottom: 50px !important;
+
+    .text {
+      background-color: black !important;
+      padding: 20px !important;
+      margin-right: 10% !important;
+      border-radius: 0 20px 0 20px !important;
+    }
+
+    .image {
+      margin-bottom: -45%;
+      margin-left: -90px;
+
+
+    }
   }
 
   .secondSection {
     display: flex !important;
     flex-direction: column-reverse !important;
-    clip-path: polygon(0 0, 100% 0, 88% 50%, 100% 100%, 0 100%, 12% 50%) !important;
+    clip-path: none !important;
     height: auto !important;
+    padding-bottom: 50px !important;
+    clip-path: polygon(100% 0, 100% 100%, 50% 95%, 0 100%, 0 0) !important;
 
+    .text {
+      background-color: white !important;
+      padding: 20px !important;
+      margin-right: 10% !important;
+      border-radius: 0 20px 0 20px !important;
+    }
+
+    .image {
+      margin-bottom: -40%;
+      margin-left: -90px;
+
+      img {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
 
   }
 }

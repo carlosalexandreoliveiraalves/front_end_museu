@@ -6,13 +6,17 @@ article {
   font-family: "Lexend", sans-serif;
 
   section {
-    background-color: $xBege;
-    height: 40vw;
+    background-image: url("../../../assets/livroEstudo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 45vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    clip-path: polygon(25% 99%, 35% 93%, 48% 95%, 60% 89%, 75% 94%, 84% 84%, 100% 89%, 100% 0, 66% 0, 0 0, 0 100%, 13% 94%);
+
 
     div {
       height: 80%;
@@ -23,10 +27,12 @@ article {
       display: flex;
       flex-direction: column;
       gap: 1.5vw;
+      background-color: rgba(0, 0, 0, 0.746);
+      padding: 1vw;
 
       h1 {
         font-size: 2vw;
-        color: $xMarromEscuro;
+        color: $xBege;
         margin-top: 2vw;
         font-weight: 300;
       }
@@ -35,24 +41,28 @@ article {
         font-size: 1.5vw;
         margin-bottom: 1vw;
         font-weight: 600;
+        color: white
       }
 
       h3 {
-          @include mainText($xMarromEscuro, 1.5vw, normal);
+          @include mainText($xBege, 1.5vw, normal);
+          font-weight: 700;
       }
 
       p {
+        color: white;
         font-size: 1.4vw;
       }
 
       a {
-        @include btnMoreInfo(black, rgba(241, 241, 241, 0), black); //$corFonte, $corFundo, $corBorda
-        width: 40%;
+        @include btnMoreInfo(rgb(255, 255, 255), rgba(0, 0, 0, 0.39), rgb(255, 255, 255)); //$corFonte, $corFundo, $corBorda
+        width: 60%;
         cursor: pointer;
+        text-align: center;
       }
 
       a:hover {
-        @include btnMoreInfoHover(white, black, rgba(244, 244, 244, 0));
+        @include btnMoreInfoHover(rgb(0, 0, 0), rgb(255, 255, 255), rgba(0, 0, 0, 0));
       }
     }
 
@@ -64,8 +74,8 @@ article {
 
 
       img{
-        width: 120%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         object-fit: contain;
         overflow: hidden;
         border-radius: 3px;
@@ -75,30 +85,38 @@ article {
 
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1250px) {
 
   article {
     font-family: "Lexend", sans-serif;
 
     section {
       background-color: $xBege;
-      height: 60vw;
+      height: auto !important;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
-      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+      padding-bottom: 10vw !important;
+      padding-top: 5vw;
+      clip-path: polygon(100% 0, 100% 100%, 50% 95%, 0 100%, 0 0) !important;
+
 
       div {
         height: 80%;
       }
 
       .text {
-        width: 80%;
+        width: 100%;
         display: flex;
         flex-direction: column;
+        background-color: black !important;
         gap: 1.5vw;
         padding-left: 15px;
+        z-index: 2 !important;
+        padding: 30px !important;
+        margin-right: -30%;
+        border-radius: 0 20px 20px 0;
 
         h1 {
           font-size: 22px;
@@ -141,8 +159,8 @@ article {
 
 
         img{
-          width: 80%;
-          height: 100%;
+          width: 100% !important;
+          height: 100% !important;
           object-fit: contain;
           overflow: hidden;
           border-radius: 3px;
@@ -154,26 +172,49 @@ article {
 
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 900px) {
   section {
     display: flex !important;
-    flex-direction: column-reverse !important;
-    clip-path: polygon(0 0, 100% 0, 88% 50%, 100% 100%, 0 100%, 12% 50%) !important;
+    flex-direction: column !important;
+    clip-path: none !important;
     height: auto !important;
     padding-bottom: 50px !important;
     padding-top: 20px !important;
 
 
+    .text {
+      width: 80% !important;
+      height: auto;
+      z-index: 2;
+      background-color: black !important;
+      padding: 20px !important;
+      margin-right: 10% !important;
+      border-radius: 20px 0 20px 0;
+
+
+      h1 {
+        font-weight: 600 !important;
+      }
+
+      a {
+        width: 90% !important;
+        font-size: 1.2em !important;
+      }
+    }
+
     .image {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 5px;
+      width: 80%;
+      margin-top: -30%;
 
 
       img{
-        width: 60% !important;
-        height: 60% !important;
+        width: 90% !important;
+        height: 90% !important;
         object-fit: contain;
         overflow: hidden;
         border-radius: 3px;
